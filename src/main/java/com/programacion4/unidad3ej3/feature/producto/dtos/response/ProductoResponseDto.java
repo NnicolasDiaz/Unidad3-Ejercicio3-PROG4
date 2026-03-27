@@ -20,4 +20,6 @@ public class ProductoResponseDto {
     private Double precio;
 
     private Integer stock;
+
+    private boolean estaEliminado;
 }

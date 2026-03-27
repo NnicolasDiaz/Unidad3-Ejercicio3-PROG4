@@ -6,6 +6,7 @@ import java.util.List;
 
 import lombok.Getter;
 
+// Clase base para excepciones personalizadas con status HTTP y lista de errores
 @Getter
 public abstract class CustomException extends RuntimeException {
     
@@ -14,8 +15,8 @@ public abstract class CustomException extends RuntimeException {
 
     public CustomException(String message, HttpStatus status, List<String> errors) {
         super(message);
-        this.status = HttpStatus.BAD_REQUEST;
-        this.errors = List.of(message);
+        this.status = status; // Status HTTP correcto (antes estaba fijo en BAD_REQUEST)
+        this.errors = errors;
     }
 
 }

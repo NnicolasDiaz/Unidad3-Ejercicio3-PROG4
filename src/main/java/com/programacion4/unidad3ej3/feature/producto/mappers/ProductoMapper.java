@@ -24,6 +24,7 @@ public class ProductoMapper {
         dto.setDescripcion(producto.getDescripcion());
         dto.setPrecio(producto.getPrecio());
         dto.setStock(producto.getStock());
+        dto.setEstaEliminado(producto.isEstaEliminado());
         return dto;
     }
 }
